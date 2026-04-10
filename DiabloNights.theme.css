@@ -1,327 +1,74 @@
-/* DiabloNights - BetterDiscord Theme (2026 Update)
- * Author: YourNameHere
- * Description: Updated for latest Discord classnames and structure.
- * Version: 2.0.0
- * For BetterDiscord/GooseMod/Powercord/ClientMod
- *
- * To use: Import this file as a custom CSS theme in your Discord client.
- */
-
+/* main.css */
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* TEST: If you see a red background, the import works! Remove after confirming. */
-body { background: #1a0a0a !important; }
-
 :root {
-    --font: 'Figtree', 'gg sans', Arial, sans-serif;
-    --background-primary: #18141c;
-    --background-secondary: #221a29;
-    --background-tertiary: #2c2138;
-    --background-floating: #1a0a0a;
-    --background-accent: #3a223a;
-    --background-modifier-hover: #2c2138;
-    --background-modifier-selected: #3a223a;
-    --background-modifier-active: #4a2a4a;
-    --background-modifier-accent: #6e3a6e;
-    --header-primary: #f3e6ff;
-    --header-secondary: #cbb3e6;
-    --text-normal: #e6d6f3;
-    --text-muted: #a18ab7;
-    --text-link: #a97fff;
-    --channels-default: #bfa3e6;
-    --interactive-normal: #bfa3e6;
-    --interactive-hover: #e6d6f3;
-    --interactive-active: #a97fff;
-    --interactive-muted: #6e3a6e;
-    --brand-experiment: #a97fff;
-    --brand-experiment-560: #a97fff;
-    --brand-experiment-600: #a97fff;
-    --brand-experiment-360: #a97fff;
-    --brand-experiment-400: #a97fff;
-    --brand-experiment-430: #a97fff;
-    --brand-experiment-500: #a97fff;
-    --brand-experiment-530: #a97fff;
-    --brand-experiment-560: #a97fff;
-    --brand-experiment-600: #a97fff;
-    --brand-experiment-700: #a97fff;
-    --brand-experiment-800: #a97fff;
-    --brand-experiment-900: #a97fff;
-    --brand-experiment-1000: #a97fff;
-    --brand-experiment-2000: #a97fff;
-    --brand-experiment-2300: #a97fff;
-    --brand-experiment-2600: #a97fff;
-    --brand-experiment-3000: #a97fff;
-    --brand-experiment-3300: #a97fff;
-    --brand-experiment-3600: #a97fff;
-    --brand-experiment-4000: #a97fff;
-    --brand-experiment-4300: #a97fff;
-    --brand-experiment-4600: #a97fff;
-    --brand-experiment-5000: #a97fff;
-    --brand-experiment-5300: #a97fff;
-    --brand-experiment-5600: #a97fff;
-    --brand-experiment-6000: #a97fff;
-    --brand-experiment-7000: #a97fff;
-    --brand-experiment-8000: #a97fff;
-    --brand-experiment-9000: #a97fff;
-    --brand-experiment-10000: #a97fff;
-    --brand-experiment-11000: #a97fff;
-    --brand-experiment-12000: #a97fff;
-    --brand-experiment-13000: #a97fff;
-    --brand-experiment-14000: #a97fff;
-    --brand-experiment-15000: #a97fff;
-    --brand-experiment-16000: #a97fff;
-    --brand-experiment-17000: #a97fff;
-    --brand-experiment-18000: #a97fff;
-    --brand-experiment-19000: #a97fff;
-    --brand-experiment-20000: #a97fff;
-    --brand-experiment-21000: #a97fff;
-    --brand-experiment-22000: #a97fff;
-    --brand-experiment-23000: #a97fff;
-    --brand-experiment-24000: #a97fff;
-    --brand-experiment-25000: #a97fff;
-    --brand-experiment-26000: #a97fff;
-    --brand-experiment-27000: #a97fff;
-    --brand-experiment-28000: #a97fff;
-    --brand-experiment-29000: #a97fff;
-    --brand-experiment-30000: #a97fff;
-    --brand-experiment-31000: #a97fff;
-    --brand-experiment-32000: #a97fff;
-    --brand-experiment-33000: #a97fff;
-    --brand-experiment-34000: #a97fff;
-    --brand-experiment-35000: #a97fff;
-    --brand-experiment-36000: #a97fff;
-    --brand-experiment-37000: #a97fff;
-    --brand-experiment-38000: #a97fff;
-    --brand-experiment-39000: #a97fff;
-    --brand-experiment-40000: #a97fff;
-    --brand-experiment-41000: #a97fff;
-    --brand-experiment-42000: #a97fff;
-    --brand-experiment-43000: #a97fff;
-    --brand-experiment-44000: #a97fff;
-    --brand-experiment-45000: #a97fff;
-    --brand-experiment-46000: #a97fff;
-    --brand-experiment-47000: #a97fff;
-    --brand-experiment-48000: #a97fff;
-    --brand-experiment-49000: #a97fff;
-    --brand-experiment-50000: #a97fff;
-    --brand-experiment-51000: #a97fff;
-    --brand-experiment-52000: #a97fff;
-    --brand-experiment-53000: #a97fff;
-    --brand-experiment-54000: #a97fff;
-    --brand-experiment-55000: #a97fff;
-    --brand-experiment-56000: #a97fff;
-    --brand-experiment-57000: #a97fff;
-    --brand-experiment-58000: #a97fff;
-    --brand-experiment-59000: #a97fff;
-    --brand-experiment-60000: #a97fff;
-    --brand-experiment-61000: #a97fff;
-    --brand-experiment-62000: #a97fff;
-    --brand-experiment-63000: #a97fff;
-    --brand-experiment-64000: #a97fff;
-    --brand-experiment-65000: #a97fff;
-    --brand-experiment-66000: #a97fff;
-    --brand-experiment-67000: #a97fff;
-    --brand-experiment-68000: #a97fff;
-    --brand-experiment-69000: #a97fff;
-    --brand-experiment-70000: #a97fff;
-    --brand-experiment-71000: #a97fff;
-    --brand-experiment-72000: #a97fff;
-    --brand-experiment-73000: #a97fff;
-    --brand-experiment-74000: #a97fff;
-    --brand-experiment-75000: #a97fff;
-    --brand-experiment-76000: #a97fff;
-    --brand-experiment-77000: #a97fff;
-    --brand-experiment-78000: #a97fff;
-    --brand-experiment-79000: #a97fff;
-    --brand-experiment-80000: #a97fff;
-    --brand-experiment-81000: #a97fff;
-    --brand-experiment-82000: #a97fff;
-    --brand-experiment-83000: #a97fff;
-    --brand-experiment-84000: #a97fff;
-    --brand-experiment-85000: #a97fff;
-    --brand-experiment-86000: #a97fff;
-    --brand-experiment-87000: #a97fff;
-    --brand-experiment-88000: #a97fff;
-    --brand-experiment-89000: #a97fff;
-    --brand-experiment-90000: #a97fff;
-    --brand-experiment-91000: #a97fff;
-    --brand-experiment-92000: #a97fff;
-    --brand-experiment-93000: #a97fff;
-    --brand-experiment-94000: #a97fff;
-    --brand-experiment-95000: #a97fff;
-    --brand-experiment-96000: #a97fff;
-    --brand-experiment-97000: #a97fff;
-    --brand-experiment-98000: #a97fff;
-    --brand-experiment-99000: #a97fff;
-    --brand-experiment-100000: #a97fff;
-    --brand-experiment-101000: #a97fff;
-    --brand-experiment-102000: #a97fff;
-    --brand-experiment-103000: #a97fff;
-    --brand-experiment-104000: #a97fff;
-    --brand-experiment-105000: #a97fff;
-    --brand-experiment-106000: #a97fff;
-    --brand-experiment-107000: #a97fff;
-    --brand-experiment-108000: #a97fff;
-    --brand-experiment-109000: #a97fff;
-    --brand-experiment-110000: #a97fff;
-    --brand-experiment-111000: #a97fff;
-    --brand-experiment-112000: #a97fff;
-    --brand-experiment-113000: #a97fff;
-    --brand-experiment-114000: #a97fff;
-    --brand-experiment-115000: #a97fff;
-    --brand-experiment-116000: #a97fff;
-    --brand-experiment-117000: #a97fff;
-    --brand-experiment-118000: #a97fff;
-    --brand-experiment-119000: #a97fff;
-    --brand-experiment-120000: #a97fff;
-    --brand-experiment-121000: #a97fff;
-    --brand-experiment-122000: #a97fff;
-    --brand-experiment-123000: #a97fff;
-    --brand-experiment-124000: #a97fff;
-    --brand-experiment-125000: #a97fff;
-    --brand-experiment-126000: #a97fff;
-    --brand-experiment-127000: #a97fff;
-    --brand-experiment-128000: #a97fff;
-    --brand-experiment-129000: #a97fff;
-    --brand-experiment-130000: #a97fff;
-    --brand-experiment-131000: #a97fff;
-    --brand-experiment-132000: #a97fff;
-    --brand-experiment-133000: #a97fff;
-    --brand-experiment-134000: #a97fff;
-    --brand-experiment-135000: #a97fff;
-    --brand-experiment-136000: #a97fff;
-    --brand-experiment-137000: #a97fff;
-    --brand-experiment-138000: #a97fff;
-    --brand-experiment-139000: #a97fff;
-    --brand-experiment-140000: #a97fff;
-    --brand-experiment-141000: #a97fff;
-    --brand-experiment-142000: #a97fff;
-    --brand-experiment-143000: #a97fff;
-    --brand-experiment-144000: #a97fff;
-    --brand-experiment-145000: #a97fff;
-    --brand-experiment-146000: #a97fff;
-    --brand-experiment-147000: #a97fff;
-    --brand-experiment-148000: #a97fff;
-    --brand-experiment-149000: #a97fff;
-    --brand-experiment-150000: #a97fff;
-    --brand-experiment-151000: #a97fff;
-    --brand-experiment-152000: #a97fff;
-    --brand-experiment-153000: #a97fff;
-    --brand-experiment-154000: #a97fff;
-    --brand-experiment-155000: #a97fff;
-    --brand-experiment-156000: #a97fff;
-    --brand-experiment-157000: #a97fff;
-    --brand-experiment-158000: #a97fff;
-    --brand-experiment-159000: #a97fff;
-    --brand-experiment-160000: #a97fff;
-    --brand-experiment-161000: #a97fff;
-    --brand-experiment-162000: #a97fff;
-    --brand-experiment-163000: #a97fff;
-    --brand-experiment-164000: #a97fff;
-    --brand-experiment-165000: #a97fff;
-    --brand-experiment-166000: #a97fff;
-    --brand-experiment-167000: #a97fff;
-    --brand-experiment-168000: #a97fff;
-    --brand-experiment-169000: #a97fff;
-    --brand-experiment-170000: #a97fff;
-    --brand-experiment-171000: #a97fff;
-    --brand-experiment-172000: #a97fff;
-    --brand-experiment-173000: #a97fff;
-    --brand-experiment-174000: #a97fff;
-    --brand-experiment-175000: #a97fff;
-    --brand-experiment-176000: #a97fff;
-    --brand-experiment-177000: #a97fff;
-    --brand-experiment-178000: #a97fff;
-    --brand-experiment-179000: #a97fff;
-    --brand-experiment-180000: #a97fff;
-    --brand-experiment-181000: #a97fff;
-    --brand-experiment-182000: #a97fff;
-    --brand-experiment-183000: #a97fff;
-    --brand-experiment-184000: #a97fff;
-    --brand-experiment-185000: #a97fff;
-    --brand-experiment-186000: #a97fff;
-    --brand-experiment-187000: #a97fff;
-    --brand-experiment-188000: #a97fff;
-    --brand-experiment-189000: #a97fff;
-    --brand-experiment-190000: #a97fff;
-    --brand-experiment-191000: #a97fff;
-    --brand-experiment-192000: #a97fff;
-    --brand-experiment-193000: #a97fff;
-    --brand-experiment-194000: #a97fff;
-    --brand-experiment-195000: #a97fff;
-    --brand-experiment-196000: #a97fff;
-    --brand-experiment-197000: #a97fff;
-    --brand-experiment-198000: #a97fff;
-    --brand-experiment-199000: #a97fff;
-    --brand-experiment-200000: #a97fff;
+    container-name: root;
+
+    --custom-guild-list-padding: 12px;
+    --panel-backdrop-filter: none;
 }
 
-/* Example: Modern Discord selectors for main panels */
-.main-2o5M8G,
-.sidebar-1tnWFu,
-.content-1jQy2l,
-.container-2o3qEW,
-.scroller-3X7KbA,
-.chat-2ZfjoI,
-.members-3WRCEx,
-.panels-3wFtMD,
-.header-2V-4Sw,
-.title-31JmR4 {
-    background: var(--background-secondary) !important;
-    color: var(--header-primary) !important;
-    font-family: var(--font) !important;
+body {
+    container-name: body;
+
+    /* font, change to '' for default discord font */
+    --font: 'figtree';
+    --code-font: '';
+
+    /* sizes */
+    --gap: 12px; /* spacing between panels */
+    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
+
+    --border-hover-transition: 0.2s ease;
 }
 
-/* Example: Channel list and chat area */
-.sidebar-1tnWFu {
-    background: var(--background-tertiary) !important;
+/* panel separation */
+.container__89463 > .toolbar__89463 /* server boosts titlebar */,
+.container__89463 > .contentContainer__89463 /* server boosts tab */,
+.guilds__5e434 /* server list */, 
+.sidebarList__5e434 /* channel list (includes dm list) */,
+.panels__5e434 /* user panel */,
+.chat_f75fb0 > .subtitleContainer_f75fb0 /* chat titlebar */,
+.chatContent_f75fb0 /* chat */,
+.container_c8ffbb /* member list */,
+.content_f75fb0 > .membersWrap_c8ffbb /* forum post member list */,
+.container__133bf > .container__9293f /* friends titlebar */,
+.container_f391e3 > .container__9293f /* message requests titlebar */,
+.homeWrapper__0920e > .container__9293f /* nitro page titlebar */,
+.container__01ae2 > .container__9293f /* vc chat titlebar */,
+.container_fb64c9 > .container__9293f /* new thread panel */,
+.peopleColumn__133bf /* online friends */,
+.nowPlayingColumn__133bf /* active now */,
+.mainPageScroller__80907 /* nitro page */,
+.headerBar__1a9ce /* quests page titlebar */,
+.scroller__23746 /* quests page */,
+.container_f391e3 > .content_f75fb0 /* message requests */,
+.shop__6db1d /* shop */,
+.content_f75fb0 > aside > .outer_c0bea0 /* dm user panel */,
+.searchResultsWrap_a98f3b /* search results */,
+.container_f369db /* forum */,
+.chat_fb64c9 /* new thread panel */,
+.container_a592e1 /* server discovery */,
+.callContainer_cb9592 /* vc container */,
+.wrapper_cb9592.sidebarOpen_cb9592 .callContainer_cb9592 /* vc container when chat open */,
+.callContainer__722ff /* stage */,
+.chat_f75fb0 > .header_c791b2 /* server members header */,
+.chat_f75fb0 > .scrollerBase_d125d2 /* server members page */,
+.chat_f75fb0 > .header__0b563  /* server channels and roles header */,
+.chat_f75fb0 > .container__0b563 /* server channels and roles page */,
+.container__8a031 /* popout modals */ {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-lg);
+    border: var(--border-thickness) solid var(--border-subtle);
+    backdrop-filter: var(--panel-backdrop-filter);
+    box-sizing: border-box;
+    transition: border-color var(--border-hover-transition);
+
+    &:hover {
+        border-color: var(--border-hover);
+    }
 }
 
-.chat-2ZfjoI {
-    background: var(--background-primary) !important;
-}
-
-/* Example: Message text */
-.messageContent-2t3eCI {
-    color: var(--text-normal) !important;
-    font-family: var(--font) !important;
-}
-
-/* Example: Mentioned messages */
-.mentioned-Tre-dv {
-    background: var(--brand-experiment) !important;
-    color: var(--header-primary) !important;
-}
-
-/* Example: User panel */
-.panels-3wFtMD {
-    background: var(--background-tertiary) !important;
-}
-
-/* Example: Popouts and modals */
-.layer-2BGhQ8,
-.modal-3c3bKg,
-.root-1CAIjD {
-    background: var(--background-floating) !important;
-    color: var(--header-primary) !important;
-}
-
-/* Example: Buttons */
-.button-38aScr,
-.button-ejjZWC {
-    background: var(--brand-experiment) !important;
-    color: var(--header-primary) !important;
-    border-radius: 6px !important;
-}
-
-/* Example: Scrollbar */
-::-webkit-scrollbar-thumb {
-    background: var(--brand-experiment) !important;
-    border-radius: 8px !important;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--background-secondary) !important;
-}
-
-/* Remove test rule after confirming theme loads */
+/* ...rest of your CSS continues as provided above... */
